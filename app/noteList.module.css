@@ -1,0 +1,97 @@
+.listContainer {
+  min-height: 100vh;
+  background: #f4f6fb; /* subtle, professional blue-gray */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+/* Navigation bar style */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #5e96f0 0%, #8345ee 100%);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.05);
+}
+.navLink {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 18px;
+}
+
+.selectedNavLink {
+  background: #ede9fe;
+  color: #3b82f6;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.10);
+  border-bottom: 3px solid #8345ee;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f0ff 0%, #e0e7ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7c3aed;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.viewBtn {
+  color: #fff;
+  background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  transition: background 0.3s, color 0.2s;
+  margin-top: 8px;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.createBtn {
+  margin-bottom: 10px;
+}
+
+.viewBtn:hover {
+  background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

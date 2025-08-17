@@ -1,0 +1,54 @@
+/* Styles for NoteItem component */
+
+.noteCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
+  padding: 32px 24px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  animation: slideUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.noteCard:hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.16);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.noteTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 12px;
+}
+
+.noteContent {
+  color: #374151;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.viewBtn {
+  color: #fff;
+  background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 100%);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  transition: background 0.3s, color 0.2s;
+  margin-top: 8px;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.viewBtn:hover {
+  background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+  color: #fff;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

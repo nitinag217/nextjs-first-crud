@@ -1,0 +1,25 @@
+/* Animations for CreateNotePage */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease;
+  color: #7c3aed;
+}
+.animate-slide-up {
+  animation: slideUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Make placeholder text more visible */
+input::placeholder,
+textarea::placeholder {
+  color: #7c3aed; /* Tailwind purple-600 */
+  opacity: 1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
