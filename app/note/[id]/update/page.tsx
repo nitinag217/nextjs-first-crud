@@ -29,7 +29,7 @@ export default function UpdateNotePage({
     (async () => {
       const { id } = await params;
       try {
-        const response = await fetch("/api/note/" + id);
+        const response = await fetch(`/api/note/${id}`);
         if (!response.ok) throw new Error("Failed to fetch note");
         const data = await response.json();
         setState((prev) => ({ ...prev, note: data, fetching: false }));

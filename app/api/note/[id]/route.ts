@@ -7,7 +7,8 @@ export const GET = async (
   req: NextRequest,
   context: { params: { id: string } }
 ) => {
-  const id = Number(context.params.id || 0);
+  const params = await context.params;
+  const id = Number(params.id || 0);
   try {
     const note = await prisma.note.findUnique({
       where: { id: Number(id) },
